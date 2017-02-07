@@ -30,9 +30,9 @@ class Car(object):
         
 
   def drive(self, drive_speed):
-    if drive_speed == 3:
-      self.speed = 1000
-    elif drive_speed == 7:
-      self.speed = 77
+    if Car.is_saloon():
+      self.speed = drive_speed * 11
+    else:
+      self.speed = 10**drive_speed
       
     return self
